@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drawing App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="toolbar">
+    <label>Režim:
+      <select id="mode">
+        <option value="brush">Štětec</option>
+        <option value="line">Čára</option>
+        <option value="rect">Obdélník</option>
+        <option value="circle">Kruh</option>
+        <option value="crop">Ořezat</option>
+      </select>
+    </label>
+    <label>Barva: <input type="color" id="color" value="#000000"></label>
+    <label>Tloušťka: <input type="range" id="size" min="1" max="50" value="5"></label>
+    <label><input type="checkbox" id="fill"> Výplň</label>
+    <button id="eraser">Guma</button>
+    <button id="undo">Undo</button>
+    <button id="clear">Clear</button>
+    <button id="download">Stáhnout PNG</button>
+  </div>
+  <div class="canvas-wrap">
+    <canvas id="canvas" width="800" height="600"></canvas>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
